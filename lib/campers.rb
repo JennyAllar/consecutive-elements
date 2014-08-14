@@ -29,4 +29,21 @@ class Campers
     end
     large_array
   end
+
+  def validated?
+    result = nil
+    counter = 0
+    @activities.each do |activity|
+      while counter < @activities.length - 2
+        if activity[1] == 2
+          counter += 1
+          result = true
+        else
+          counter += 1
+          result = false
+        end
+      end
+    end
+    result
+  end
 end
